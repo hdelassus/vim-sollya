@@ -1,0 +1,13 @@
+# Installing #
+
+Just run `make` or copy the directories ftdetect and syntax into your Vim
+directory. By default it is $(HOME)/.vim/
+
+
+# Usage #
+
+Every source file with the extension .sollya should be recognized automatically
+by Vim. To use with other extensions, on a per-file basis, type the command
+:setlocal filetype=sollya
+To make it permanent for other extensions, modify and add the extension to the
+file $(VIMDIR)/ftdetect/sollya.vim

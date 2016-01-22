@@ -1,0 +1,20 @@
+// sollyaConstants
+HP SG D DD TD QD
+halfprecision single double doubledouble tripledouble
+RD RN RU RZ
+infty NaN
+pi Pi
+
+// sollyaSpecialValues
+absolute relative
+false true
+fixed floating
+file
+honorcoeffprec
+off on
+error
+postscript postscriptfile
+perturb
+
+// sollyaDisplayValues
+binary decimal dyadic hexadecimal powers

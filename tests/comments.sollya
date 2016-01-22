@@ -1,0 +1,20 @@
+restart; // A comment
+
+/* a long comment
+   starting here
+ *
+
+ *
+
+ ...
+
+ * ending here
+ */
+
+// TODO something to do
+// FIXME something to fix
+// XXX something important
+// outside:
+TODO=0;
+FIXME=0;
+XXX=0;

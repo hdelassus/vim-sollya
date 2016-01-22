@@ -1,0 +1,112 @@
+// sollyaUndocumented
+coeff
+composepolynomials
+degree
+exponent
+externalproc
+guessdegree
+length
+mantissa
+mid
+objectname
+precision
+printsingle printxml
+readfile readxml
+rename
+time
+zerodenominators
+
+// sollyaFunctions
+abs
+acos
+acosh
+asin
+asinh
+atan
+atanh
+cos
+cosh
+diff
+DE
+doubleextended
+erf
+erfc
+ceil
+exp
+expm1
+floor
+log log10 log1p log2
+max
+min
+nearestint
+remez
+revert
+sin sinh
+sqrt
+subpoly
+sup
+supnorm
+tan tanh
+write
+
+// sollyaSpecialFunctions
+SG() D() DD() TD() HP() QD()
+single() double()
+doubledouble() tripledouble()
+halfprecision() quad()
+
+// sollyaCommands
+accurateinfnorm
+annotatefunction
+asciiplot
+autodiff
+bashevaluate
+bashexecute
+canonical
+chebyshevform
+checkinfnorm
+denominator
+dirtyfindzeros
+dirtyinfnorm
+dirtyintegral
+dirtysimplify
+evaluate
+execute
+externalplot
+findzeros
+fpminimax
+getbacktrace
+getsuppressedmessages
+head
+horner
+implementconstant
+implementpoly
+inf
+infnorm
+integral
+isbound
+isevaluable
+library
+libraryconstant
+nop
+numberroots
+numerator
+parse
+plot
+print printbinary printdouble printexpansion printfloat printhexa
+quit
+rationalapprox
+restart
+round roundcoefficients roundcorrectly
+searchgal
+showmessagenumbers
+simplify
+sort
+substitute
+sup
+suppressmessage
+tail
+taylor taylorform
+unsuppressmessage
+version
+worstcase

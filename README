@@ -1,0 +1,13 @@
+Vim-Sollya is a Vim plugin that adds some support for syntax highlighting the
+Sollya scripting language.
+
+Vim is a text editor that is upwards compatible to Vi. It can be used to edit
+all kinds of plain text. It is especially useful for editing programs.
+It is available at http://www.vim.org/
+
+Sollya is a computer program whose purpose is to provide an environment for
+safe floating-point code development. It is particularily targeted to the
+automatized implementation of mathematical floating-point libraries (libm).
+Amongst other features, it offers a certified infinity norm, an automatic
+polynomial implementer and a fast Remez algorithm.
+It is available at http://sollya.gforge.inria.fr/
