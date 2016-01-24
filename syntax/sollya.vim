@@ -9,15 +9,13 @@ if exists("b:current_syntax")
 endif
 
 " Keywords
-syn keyword sollyaKeywords begin end var
-      \ if then else
-      \ while do
-      \ for from to by in
-      \ proc procedure return
-      \ externalproc bind
-      \ match with default
-      \ list of
-syn keyword sollyaKeywords _x_
+syn keyword sollyaBlock begin end
+syn keyword sollyaConditional if then else match with
+syn keyword sollyaLabel default
+syn keyword sollyaRepeat while do for from to by in
+syn keyword sollyaStatement return proc procedure
+syn keyword sollyaDecl list of var
+syn keyword sollyaFreeVar _x_
 
 "" Predefined functions and operators
 "syn keyword sollyaOperators ! != && () * + , - .  ...  .: / :.  := ; < = == >
@@ -29,8 +27,10 @@ syn keyword sollyaConstants HP SG D DD TD QD
       \ infty NaN
       \ pi Pi
 
-syn keyword sollyaSpecialValues absolute relative
+syn keyword sollyaBoolean
       \ false true
+
+syn keyword sollyaSpecialValues absolute relative
       \ fixed floating
       \ file
       \ honorcoeffprec
@@ -40,25 +40,6 @@ syn keyword sollyaSpecialValues absolute relative
       \ perturb
 
 syn keyword sollyaDisplayValues binary decimal dyadic hexadecimal powers
-
-" FIXME
-syn keyword sollyaUndocumented
-      \ coeff
-      \ composepolynomials
-      \ degree
-      \ exponent
-      \ externalproc
-      \ guessdegree
-      \ length
-      \ mantissa
-      \ mid
-      \ objectname
-      \ precision
-      \ printsingle printxml
-      \ readfile readxml
-      \ rename
-      \ time
-      \ zerodenominators
 
 syn keyword sollyaFunctions abs
       \ acos
@@ -113,15 +94,20 @@ syn match sollyaSpecialFunctions display "\(single\|double\) *("he=e-1
 syn match sollyaSpecialFunctions display "\(doubledouble\|tripledouble\) *("he=e-1
 syn match sollyaSpecialFunctions display "\(halfprecision\|quad\) *("he=e-1
 
-syn keyword sollyaCommands accurateinfnorm
+syn keyword sollyaCommands
+      \ accurateinfnorm
       \ annotatefunction
       \ asciiplot
       \ autodiff
       \ bashevaluate
       \ bashexecute
+      \ bind
       \ canonical
       \ chebyshevform
       \ checkinfnorm
+      \ coeff
+      \ composepolynomials
+      \ degree
       \ denominator
       \ dirtyfindzeros
       \ dirtyinfnorm
@@ -129,11 +115,14 @@ syn keyword sollyaCommands accurateinfnorm
       \ dirtysimplify
       \ evaluate
       \ execute
+      \ exponent
       \ externalplot
+      \ externalproc
       \ findzeros
       \ fpminimax
       \ getbacktrace
       \ getsuppressedmessages
+      \ guessdegree
       \ head
       \ horner
       \ implementconstant
@@ -143,16 +132,24 @@ syn keyword sollyaCommands accurateinfnorm
       \ integral
       \ isbound
       \ isevaluable
+      \ length
       \ library
       \ libraryconstant
+      \ mantissa
+      \ mid
       \ nop
       \ numberroots
       \ numerator
+      \ objectname
       \ parse
       \ plot
+      \ precision
       \ print printbinary printdouble printexpansion printfloat printhexa
+      \ printsingle printxml
       \ quit
       \ rationalapprox
+      \ readfile readxml
+      \ rename
       \ restart
       \ round roundcoefficients roundcorrectly
       \ searchgal
@@ -164,9 +161,11 @@ syn keyword sollyaCommands accurateinfnorm
       \ suppressmessage
       \ tail
       \ taylor taylorform
+      \ time
       \ unsuppressmessage
       \ version
       \ worstcase
+      \ zerodenominators
 
 syn keyword sollyaTypes
       \ boolean
@@ -212,17 +211,23 @@ hi def link sollyaTodo                  Todo
 hi def link sollyaCommentL              sollyaComment
 hi def link sollyaComment               Comment
 
-hi def link sollyaStrings               Constant
+hi def link sollyaStrings               String
 hi def link sollyaConstants             Constant
 hi def link sollyaSpecialValues         Constant
-hi def link sollyaNumbers               Constant
+hi def link sollyaNumbers               Float
 hi def link sollyaDisplayValues         Constant
+hi def link sollyaBoolean               Boolean
 
-hi def link sollyaKeywords              Statement
+hi def link sollyaBlock                 Keyword
+hi def link sollyaConditional           Conditional
+hi def link sollyaLabel                 Label
+hi def link sollyaRepeat                Repeat
+hi def link sollyaStatement             Statement
+hi def link sollyaDecl                  Keyword
+hi def link sollyaFreeVar               Keyword
 hi def link sollyaFunctions             Statement
 hi def link sollyaSpecialFunctions      Statement
 hi def link sollyaCommands              Statement
-hi def link sollyaUndocumented          Statement
 hi def link sollyaGlobalVariables       Statement
 
 hi def link sollyaTypes                 Type
