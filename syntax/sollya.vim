@@ -179,7 +179,6 @@ syn keyword sollyaTypes
       \ void
 
 syn keyword sollyaTodo contained TODO FIXME XXX NOTE
-syn match sollyaComments "//.*$" contains=sollyaTodo
 
 syn case ignore
 "" Literal Numbers
@@ -203,13 +202,15 @@ syn case match
 
 " Regions
 syn region sollyaStrings  start='"'   end='"' skip='\\"'
-syn region sollyaComments start='/\*' end='\*/' contains=sollyaTodo
+syn region sollyaCommentL start='//'  end='$' skip='\\$' contains=sollyaTodo
+syn region sollyaComment  start='/\*' end='\*/' contains=sollyaTodo
 
 let b:current_syntax = "sollya"
 
 " Highlights bindings
 hi def link sollyaTodo                  Todo
-hi def link sollyaComments              Comment
+hi def link sollyaCommentL              sollyaComment
+hi def link sollyaComment               Comment
 
 hi def link sollyaStrings               Constant
 hi def link sollyaConstants             Constant
